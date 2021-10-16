@@ -4,11 +4,13 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: "bash -c 'cd /covid && python main.py /covid/covid_africa.csv'"
-    volumes:
-      - .:/covid
+      #command: "bash -c 'which python'"
+
+    command: "bash -c 'cd /covid && python3 main.py /covid/covid_africa.csv'"
   test:
     build:
       context: .
       dockerfile: Dockerfile
-    command: "bash -c 'cd /covid && python unittest.py'"
+      #command: "bash -c 'which python3'"
+
+    command: "bash -c 'cd /covid && python3 test.py'"

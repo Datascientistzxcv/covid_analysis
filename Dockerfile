@@ -1,4 +1,4 @@
-	FROM ubuntu:18.04
+FROM ubuntu:18.04
 RUN apt -y update &&\
     apt -y install python3 python3-pip
 RUN apt -y install libglib2.0-0
