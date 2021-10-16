@@ -1,0 +1,14 @@
+version: '2'
+services:
+  run:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: "bash -c 'cd /covid && python main.py /covid/covid_africa.csv'"
+    volumes:
+      - .:/covid
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: "bash -c 'cd /covid && python unittest.py'"
